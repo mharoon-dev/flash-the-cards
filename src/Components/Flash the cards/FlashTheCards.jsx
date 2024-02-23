@@ -6,22 +6,22 @@ export default function FlashTheCards() {
     const details = [
         {
             id: 1,
-            question: "What Language is React based on?",
+            question: "JS stands for:",
             answer: "JavaScript",
             show: false
             
         },
         {
             id:2,
-            question: "What Language is React based on?",
-            answer: "JavaScript",
+            question: "CSS stands For:",
+            answer: "Cascading Style Sheets",
             show: false
             
         },
         {
             id: 3,
-            question: "What Language is React based on?",
-            answer: "JavaScript",
+            question: "HTML stands For",
+            answer: "Hyper Text Markup Language",
             show: false
             
         },
@@ -34,15 +34,15 @@ export default function FlashTheCards() {
         },
         {
             id: 5,
-            question: "What Language is React based on?",
-            answer: "JavaScript",
+            question: "What is JavaScript?",
+            answer: "JavaScript is Programming Language.",
             show: false
             
         },
         {
             id: 6,
-            question: "What Language is React based on?",
-            answer: "JavaScript",
+            question: "what is ReactJS?",
+            answer: "ReactJS is JavaScript Framework.",
             show: false
             
         },
@@ -53,9 +53,6 @@ export default function FlashTheCards() {
   return (
     <div
       className="container-fluid "
-      style={{
-        border: "2px solid red",
-      }}
     >
       <div className="row">
         <div className="col-12 mt-4">
@@ -69,8 +66,8 @@ export default function FlashTheCards() {
         {cardsDetails.map((card , index) => (
             // console.log(index),
             // console.log(card),
-            
-            <Card card={card} key={card.id} index={index} />
+
+            <Card card={card} key={card.id} index={index} allCards={cardsDetails} />
             
         ))}
 
